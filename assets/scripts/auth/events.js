@@ -29,7 +29,7 @@ const onSignOut = function (event) {
   const form = event.target
   const data = getFormFields(form)
   console.log(data)
-  api.signIn(data)
+  api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
 }

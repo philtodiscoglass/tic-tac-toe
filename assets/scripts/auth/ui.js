@@ -24,9 +24,21 @@ const onSignInFailure = function (response) {
   $('form').trigger('reset')
 }
 
+const onSignOutSuccess = function (response) {
+  $('#message').text('You have signed out')
+  $('form').trigger('reset')
+}
+
+const onSignOutFailure = function (response) {
+  $('#message').text('Sign out failed')
+  $('form').trigger('reset')
+}
+
 module.exports = {
   onSignUpSuccess: onSignUpSuccess,
   onSignUpFailure: onSignUpFailure,
   onSignInSuccess: onSignInSuccess,
-  onSignInFailure: onSignInFailure
+  onSignInFailure: onSignInFailure,
+  onSignOutSuccess: onSignOutSuccess,
+  onSignOutFailure: onSignOutFailure
 }
