@@ -1,1 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
+
+.col-4 {
+  background-color: orange;
+  border: 1px solid black;
+  // height: 5%;
+  // width: 5%;
+  padding: 10%;
+}
+
+.row {
+  padding: 20%;
+}
