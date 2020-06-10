@@ -6,6 +6,8 @@ const onSignUpSuccess = function (response) {
   console.log(response)
   $('#message').text('You have signed up succesfully, ' + response.user.email)
   $('form').trigger('reset')
+  $('#sign-in').show()
+  $('#sign-up').hide()
 }
 
 const onSignUpFailure = function (response) {
@@ -18,6 +20,11 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('You have signed in, ' + response.user.email)
   $('form').trigger('reset')
+  $('#new-game').show()
+  $('#sign-out').show()
+  $('#change-password').show()
+  $('#sign-in').hide()
+  $('#sign-up').hide()
 }
 
 const onSignInFailure = function (response) {
@@ -28,6 +35,11 @@ const onSignInFailure = function (response) {
 const onSignOutSuccess = function (response) {
   $('#message').text('You have signed out')
   $('form').trigger('reset')
+  $('#new-game').hide()
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#sign-in').show()
+  $('#sign-up').show()
 }
 
 const onSignOutFailure = function (response) {

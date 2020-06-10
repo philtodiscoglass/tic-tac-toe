@@ -2,18 +2,24 @@
 
 const api = require('./api')
 const ui = require('./ui')
-const getFormFields = require('./../../../lib/get-form-fields')
+// const getFormFields = require('./../../../lib/get-form-fields')
 
 const onNewGame = function (event) {
   event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-  console.log(data)
-  api.newGame(data)
+  api.newGame()
     .then(ui.onNewGameSuccess)
     .catch(ui.onNewGameFailure)
 }
 
+const onUpdateGame = function (event) {
+  event.preventDefault()
+  console.log($(event.target).data('cell-index'))
+  api.updateGame()
+    .then(ui.onUpdateGameSuccess)
+    .catch(ui.onUpdateGameFailure)
+}
+
 module.exports = {
-  onNewGame: onNewGame
+  onNewGame: onNewGame,
+  onUpdateGame: onUpdateGame
 }
