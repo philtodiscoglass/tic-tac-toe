@@ -1,15 +1,38 @@
-<<<<<<< HEAD
-This is my tic tac toe readme. https://imgur.com/a/UXBz17w
+**Tic Tac Toe**
 
-As an avid tic toe player, I want to be able to keep track of my scores so I can improve. As a user, I want the game to not refresh each move, so that my game is smooth. As a frequent user, I want a sign-in method so that the game remembers me. Day 1: Set up sign in/sign out/change password. Add simple buttons for authentication. Day 2: Assemble the game board in HTML/CSS. 3: Make the game board interactive (response to clicks). Create new game button. Day 4: Save score results/users
-=======
-This is my tic tac toe readme.
-https://imgur.com/a/UXBz17w
+This application allows you play yourself (or a friend) in Tic Tac Toe. The app currently allows the user to sign up, sign in, sign out, and change their password. The new game button displays the game board where you click in x's or o's, depending who's turn it is. My end goal is to add more game logic. For example, I'm planing on adding a winner alert, and a feature that tracks and displays the users game stats.
 
-As an avid tic toe player, I want to be able to keep track of my scores so I can improve.
-As a user, I want the game to not refresh each move, so that my game is smooth.
-As a frequent user, I want a sign-in method so that the game remembers me.
-Day 1: Set up sign in/sign out/change password. Add simple buttons for authentication.
-Day 2: Assemble the game board in HTML/CSS. 3: Make the game board interactive (response to clicks). Create new game button.
-Day 4: Save score results/users
->>>>>>> d91fcb2ce6c40b4d35bce790392e5d86fa7df0a0
+**Here are the links to my deployed application and my reposository:**
+
+* [Repo](https://github.com/philtodiscoglass/tic-tac-toe)
+* [Application](https://philtodiscoglass.github.io/tic-tac-toe/)
+
+My plan of attack started with authentication. I began with sign up because that is the first action the app requires from a new user. I then completed sign in, sign out, and change password. I then moved on to building the game board, implementing a feature that retreives the index value of the clicked square on the game board. I stored that value and used it to keep track of what is displayed on the board (x's and o's and their positions).
+
+**User Stories:**
+
+* As a user I want to be able to create a new account and sign in.
+* As a user I want the game to be fast and not refresh on each move.
+* As a user I want to be able to keep track of my game stats.
+* As a user I want to play tic tac toe.
+* As a user I want an alert that tells me when I make an invalid move.
+
+**Tech Used:**
+
+* Javascript
+* jQuery
+* HTML/CSS
+
+**Unsolved Problems**
+
+* Winner logic
+* Stats
+
+**Bugs**
+
+* First move shows no value in cell array
+* You can overwrite cell value in the array (but not on the board)
+
+**Wireframe:**
+
+[Wireframe](https://imgur.com/a/UXBz17w)
