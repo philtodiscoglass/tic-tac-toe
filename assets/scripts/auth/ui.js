@@ -21,6 +21,7 @@ const onSignInSuccess = function (response) {
   $('#message').text('You have signed in, ' + response.user.email)
   $('form').trigger('reset')
   $('#new-game').show()
+  $('#show-games').show()
   $('#sign-out').show()
   $('#change-password').show()
   $('#sign-in').hide()
@@ -41,6 +42,7 @@ const onSignOutSuccess = function (response) {
   $('#sign-in').show()
   $('#sign-up').show()
   $('.container').hide()
+  $('#show-games').hide()
 }
 
 const onSignOutFailure = function (response) {

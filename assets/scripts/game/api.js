@@ -33,7 +33,18 @@ const updateGame = function (cells, currentPlayer) {
   })
 }
 
+const showGames = function (status) {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    medthod: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   newGame: newGame,
-  updateGame: updateGame
+  updateGame: updateGame,
+  showGames: showGames
 }

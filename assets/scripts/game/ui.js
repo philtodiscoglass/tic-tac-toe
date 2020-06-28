@@ -13,14 +13,21 @@ const onNewGameFailure = function (response) {
 }
 
 const onUpdateGameSuccess = function (response) {
-
 }
 
 const onUpdateGameFailure = function (response) {
   $('#message').text('Update failed')
 }
 
-const onGameOver = function () {
+const onGameOver = function (over) {
+}
+
+const onShowGamesSuccess = function (response) {
+  $('#message').text(`You have played ${response.games.length} games!`)
+}
+
+const onShowGamesFailure = function (response) {
+  $('#message').text('Cannot show games!')
 }
 
 module.exports = {
@@ -28,5 +35,7 @@ module.exports = {
   onNewGameFailure: onNewGameFailure,
   onUpdateGameSuccess: onUpdateGameSuccess,
   onUpdateGameFailure: onUpdateGameFailure,
-  onGameOver: onGameOver
+  onGameOver: onGameOver,
+  onShowGamesSuccess: onShowGamesSuccess,
+  onShowGamesFailure: onShowGamesFailure
 }
