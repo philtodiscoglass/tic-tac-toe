@@ -40,6 +40,7 @@ const onSignOutSuccess = function (response) {
   $('#change-password').hide()
   $('#sign-in').show()
   $('#sign-up').show()
+  $('.container').hide()
 }
 
 const onSignOutFailure = function (response) {
