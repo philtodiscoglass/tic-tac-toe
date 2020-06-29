@@ -3,7 +3,6 @@
 const store = require('./../store')
 
 const onSignUpSuccess = function (response) {
-  console.log(response)
   $('#message').text('You have signed up succesfully, ' + response.user.email)
   $('form').trigger('reset')
   $('#sign-in').show()
@@ -16,7 +15,6 @@ const onSignUpFailure = function (response) {
 }
 
 const onSignInSuccess = function (response) {
-  console.log(response)
   store.user = response.user
   $('#message').text('You have signed in, ' + response.user.email)
   $('form').trigger('reset')

@@ -40,14 +40,11 @@ const onUpdateGame = function (event) {
     .then(whoWon())
     .then(ui.onGameOver)
     .catch(ui.onUpdateGameFailure)
-  console.log(store.game.cells)
-  console.log(store.game.over)
 }
 
 const whoWon = function () {
   const isATie = (tie) => tie !== ''
   if (store.game.cells[0] === 'X' && store.game.cells[1] === 'X' && store.game.cells[2] === 'X') {
-    console.log('made it to winner')
     $('#message').show().text('X Wins!')
     store.game.over = true
   } else if (store.game.cells[3] === 'X' && store.game.cells[4] === 'X' && store.game.cells[5] === 'X') {
@@ -95,7 +92,7 @@ const whoWon = function () {
   } else if (store.game.cells.every(isATie)) {
     store.game.over = true
     $('#message').show().text(`It's a tie!`)
-  } return console.log('over')
+  } return ('')
 }
 
 const onShowGames = function () {
